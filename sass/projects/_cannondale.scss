@@ -1,0 +1,169 @@
+
+/* REAL CSS */
+
+.cannondale {
+  background: #84c547;
+  color: white;
+}
+
+.cannondale-wrap{
+  background: #fafafa;
+  text-align: center;
+
+  h3 {
+  font-size: 42px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+  }
+
+}
+
+.cannondale-header {
+  background: #84c547;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 1000px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(tablet){
+    height: 90vh;
+  }
+}
+
+.cannondale-logo {
+  width: 100%;
+  max-width: 598px;
+  margin: auto;
+  
+  img {
+    width: 100%;
+  }
+}
+
+.cannondale-description{
+  width: 100%;
+  max-width: 770px;
+  margin: auto;
+  text-align: center;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.cannondale-divider-center {
+  width: 40px;
+  height: 4px;
+  background: #84c547;
+  margin: 18px auto 18px auto;
+}
+
+.cannondale-video {
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 0 0 100px 0;
+  }
+}
+
+.cannondale-breakdown{
+  width: 100%;
+  background: #d9d9d9;
+  padding: 60px 20px 60px 20px;
+  
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.cannondale-stack {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  position: relative;
+}
+
+
+.image-below {
+  position: relative;
+  z-index: 333;
+  width: 100%;
+}
+
+.image-stack {
+  position: absolute;
+  width: 100%;
+  z-index: 444;
+  top: 0;
+  left: 0;
+}
+
+.cannondale-detail1 {
+  display: none;
+
+  @include breakpoint(desktop){
+    display: block;
+    position: absolute;
+    z-index: 555;
+    top: 459px;
+    left: 119px;
+    width: 154px;
+  }
+}
+
+.cannondale-detail2 {
+  display: none;
+
+  @include breakpoint(desktop){
+    display: block;
+    position: absolute;
+    width: 221px;
+    z-index: 555;
+    top: 315px;
+    right: 75px;
+  }
+}
+
+.cannondale-tour{
+  width: 100%;
+  background: #18191a;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.cannondale-tour-screens {
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+  text-align: center;
+
+  img{
+    margin: 20px 0 20px 0;
+  }
+
+  p{
+    text-align: center;
+    color: #8a9199;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}

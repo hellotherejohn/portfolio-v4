@@ -1,0 +1,550 @@
+.content-wrap {
+  width: 100%;
+  background: #111;
+  margin: 0 auto;
+
+   @include breakpoint(10col) {
+    max-width: 950px;
+   }
+
+   @include breakpoint(12col) {
+    max-width: 1140px;
+   }
+
+   @include breakpoint(14col) {
+    max-width: 1280px;
+   }
+}
+
+.overview {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17,17,17,0.95);
+  position: fixed;
+  z-index: 9999;
+  padding: 100px 0 100px 0;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 500ms;
+  display: none;
+}
+
+.shownav {
+  opacity: 1;
+  display: block;
+  transition: all 500ms;
+}
+
+.closenav {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 0.15em;
+    font-size: 14px;
+    color: #fff;
+    background: #666;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 300ms;
+
+    &:hover {
+      background: #fff;
+      color: #222;
+      transition: all 300ms;
+    }
+  }
+
+.caselist {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.caserow {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  transition: all 300ms;
+
+  &:hover {
+    background: #222;
+    transition: all 200ms;
+  }
+
+  .numberbox {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #b4946b;
+    color: #b4946b;
+    line-height: 37px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+  }
+
+  h3 {float: left; margin-left: 20px;}
+
+  p {float: left; margin: 0 0 0 20px; padding: 0; color: #888; line-height: 45px; height: 40px;}
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: normal;
+  margin: 55px 0 0 0;
+  padding: 0;
+  color: #fff;
+}
+
+h2:first-child{
+  margin: 0px;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(laptop) {
+    min-height: 700px;
+  }
+
+  @include breakpoint(10col) {
+    max-width: 810px;
+    margin-left: 70px;
+   }
+
+  @include breakpoint(12col) {
+    max-width: 1000px;
+   }
+
+   @include breakpoint(14col) {
+    max-width: 1070px;
+  }
+}
+
+.main{
+  margin: auto;
+  width: 100%;
+
+  @include breakpoint(tablet){
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+  }
+}
+
+.card{
+  width: 100%;
+  height: 380px;
+  pointer-events: none;
+  margin: auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: relative;
+  
+    @include breakpoint(laptop){
+      width: 620px;
+    }
+
+    @include breakpoint(10col) {
+     max-width: 670px;
+    }
+}
+
+  .topmark {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  .introtxt {
+    position: absolute;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    font-weight: bold;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(laptop) {
+     font-size: 50px;
+     line-height: 70px;
+    }
+
+    @include breakpoint(10col) {
+     font-size: 60px;
+    }
+  }
+
+  .txtrow1 {
+    top: 85px;
+    opacity: 0;
+    transform: translateZ(15px);
+
+    @include breakpoint(6col) {
+      top: 95px;
+    }
+  }
+  .txtrow2 {
+    top: 135px;
+    opacity: 0;
+    transform: translateZ(10px);
+
+    @include breakpoint(6col) {
+      top: 160px;
+    }
+  }
+  .txtrow3 {
+    top: 190px;
+    opacity: 0;
+    transform: translateZ(5px);
+
+    @include breakpoint(6col) {
+      top: 225px;
+    }
+  }
+
+  @keyframes textin {
+    0%   { opacity: 0; }
+    40%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .txtin1 {
+    animation: textin 1s;
+    transform-origin: center left;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
+  }
+
+  .txtin2 {
+    animation: textin 1s;
+    transform-origin: center left;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 150ms;
+  }
+
+  .txtin3 {
+    animation: textin 1s;
+    transform-origin: center left;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 250ms;
+  }
+
+  .scrollbox {
+    position: absolute;
+    width: 190px;
+    margin: -20px 0 0 -95px;
+    top: 50%;
+    left: 50%;
+    z-index: 7777;
+  }
+
+  @keyframes boxdown {
+    0%   { transform: translateY(0px); }
+    20%   { transform: translateY(0px); }
+    100% { transform: translateY(150px); }
+  }
+
+  .scrollboxdown {
+    animation: boxdown 1s;
+    transform-origin: center left;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards; 
+  }
+
+  #scrolltxt { opacity: 1; }
+  #loadtxt { opacity: 0; }
+
+/***** GRID CSS ****/
+
+.mid {
+  width: 100%;
+}
+
+.casebox {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  max-width: 1140px;
+  margin-left: 70px;
+  position: relative;
+
+  img {
+    position: absolute;
+  }
+}
+
+.casebottom {
+  width: 760px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-top: -200px;
+  overflow: hidden;
+
+  img {
+    transition: all 1s;
+  }
+}
+
+.casenumber {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 60px;
+  cursor: pointer;
+
+  .diamond {
+    width: 100px;
+    height: 100px;
+    background: #222;
+    transform: rotate(45deg);
+    position: absolute;
+    box-shadow: 6px 0px 60px 0px rgba(17,17,17,0.5);
+    transition: all 300ms;
+  }
+
+  .numberstack {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 25px;
+    text-align: center;
+    color: #fff;
+
+    .topnumber { display: block; margin: 10px 0 10px 0; transition: all 300ms;}
+    .bottomnumber { display: block; margin: 10px 0 10px 0; transition: all 300ms;}
+
+    .midmenu { width: 20px; height: 2px; background: #666; margin: 0 auto; transition: all 300ms; }
+  }
+
+  .restmenu { width: 20px; height: 16px; opacity: 0; position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -10px; border-top: 2px solid #fff; border-bottom: 2px solid #fff; transition: all 300ms;}
+
+  &:hover .numberstack .topnumber {
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 300ms;
+  }
+
+  &:hover .numberstack .bottomnumber {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 300ms;
+  }
+
+  &:hover .numberstack .midmenu {
+    background: #fff;
+    transition: all 500ms;
+  }
+
+  &:hover .restmenu {
+    opacity: 1;
+    transition: all 700ms;
+  }
+
+  &:hover .diamond{
+    background: #333;
+    transition: all 300ms;
+  }
+
+}
+
+.casemid {
+  width: 570px;
+  height: 428px;
+  position: absolute;
+  top: 50%;
+  left: 380px;
+  margin-top: -114px;
+  box-shadow: 6px 0px 60px 0px rgba(17,17,17,0.5);
+  overflow: hidden;
+
+  img {
+    transition: all 1s;
+  }
+}
+
+.casetop {
+  width: 475px;
+  height: 290px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 665px;
+  margin-top: -145px;
+  background: #222;
+  box-shadow: 6px 0px 60px 0px rgba(17,17,17,0.5);
+  padding: 55px 0 0 60px;
+  text-decoration: none;
+
+  &:hover .viewcase {
+    background: #fff;
+    color: #111;
+  }
+
+  .casedivider {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, #dfd1bc 0%,#b4946b 50%,#6c5a49 100%);
+    margin: 15px 0 15px 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: #888;
+    font-size: 18px;
+  }
+
+  .viewcase {
+    margin: 15px 0 0 0;
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 0.15em;
+    font-size: 14px;
+    color: #fff;
+    background: #666;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 300ms;
+  }
+}
+
+.casezoom {
+  transform: scale(1.05);
+}
+
+.casecover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+}
+
+/*  ABOUT CSS STARTS HERE  */
+
+
+.bottomwrap {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  max-width: 1140px;
+  margin-left: 70px;
+  margin-top: 300px;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.leftme {
+  width: 34%;
+  max-width: 380px;
+  height: 100%;
+  float: left;
+
+  .shard {
+    position: absolute;
+    width: 95px;
+    height: 570px;
+    background-image: url("/img/portrait-380.jpg");
+    overflow: hidden;
+  }
+
+  .piece2 { background-position: -95px; left: 95px;}
+  .piece3 { background-position: -190px; left: 190px;}
+  .piece4 { background-position: -285px; left: 285px;}
+}
+
+.rightme {
+  float: left;
+  width: 66%;
+  padding: 0 0 0 95px;
+
+  p {
+    color: #888;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 30px;
+  }
+
+  a {
+    color: #888;
+    font-size: 18px;
+    line-height: 28px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #888;
+    margin-right: 20px;
+    height: 30px;
+    transition: all 300ms;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      transition: all 300ms;
+    }
+  }
+}
+
+.rightgap { margin-top: 100px; }
+.smallgap { margin-top: 30px;}
+
+.rightme table {
+  width: 90%;
+  margin-top: 30px;
+}
+
+.rightme td {
+  width: 100%;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: normal;
+  color: #888;
+  padding-right: 30px;
+  overflow: hidden;
+  display: block;
+
+  @include breakpoint(tablet){
+    width: auto;
+    display: table-cell;
+    padding-right: 0px;
+  }
+}
+
+.rightme th {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  text-align: left;
+  width: 25%;
+  color: #fff;
+  min-width: 100px;
+  padding-top: 10px;
+  display: block;
+
+  @include breakpoint(tablet){
+    display: table-cell;
+    padding-top: 0px;
+  }
+}

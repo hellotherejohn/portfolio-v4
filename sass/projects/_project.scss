@@ -1,0 +1,85 @@
+.project-menu {
+  width: 70px;
+  height: 100%;
+  background: #252729;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+
+  @include breakpoint(tablet){
+    display: block;
+  }
+}
+
+.homebtn {
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  float: left;
+  overflow: hidden;
+  padding: 23px;
+
+  &:hover{
+    background: #373a3d;
+    transition: all 200ms;
+  }
+}
+
+.menubottom {
+  display: block;
+  padding: 0 0 24px 25px;
+  position: fixed;
+  bottom: 0;
+  color: #c7cdd4;
+
+  span {
+    transform: rotate(-90deg) translateY(0.5em);
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 0;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+}
+
+.project-wrap {
+  width: 100%;
+  padding-left: 0px;
+  text-align: center;
+
+  @include breakpoint(tablet){
+    padding-left: 70px;
+  }
+}
+
+.embed-container {
+  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.project-thanks {
+  width: 100%;
+  line-height: 150px;
+  height: 150px;
+  text-align: center;
+  font-size: 24px;
+
+  @include breakpoint(tablet){
+    line-height: 300px;
+    height: 300px;
+  }
+
+  @include breakpoint(desktop){
+    font-size: 42px;
+  }
+}

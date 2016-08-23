@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    John Karlsson -- Design & Code -- @hellotherejohn
+
+# THANKS
+
+    Sebastian Scarpa -- HTML/CSS Mentor -- @thesherps
+    Mikael Hallgren -- JavaScript Mentor -- @hellotheremike
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, SASS
+    jQuery, Normalize.css, Animate.css, Animsition.js, WOW.js, Retina.js, smooth-scroll.js
+    Github, CodeKit, Sublime Text 2
+    Pingdom, Cloudflare CDN

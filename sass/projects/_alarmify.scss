@@ -1,0 +1,307 @@
+.alarmify{
+ background: #0087cf;
+ color: white; 
+}
+
+.alarmify-wrap{
+  background: #fafafa;
+
+  h3 {
+  font-size: 42px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+  }
+}
+
+.alarmify-header {
+  background: #0087cf;
+  width: 100%;
+  height: 95vh;
+  min-height: 500px;
+  max-height: 1000px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.alarmify-logo {
+  width: 100%;
+  max-width: 397px;
+  margin: auto;
+}
+
+.alarmify-info {
+  font-size: 18px;
+  color: #fff;
+  margin-top: -20px;
+}
+
+.alarmify-name {
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid #fff;
+}
+
+.alarmify-year {
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid #fff;
+  border-left: none;
+}
+
+/* ACTUAL CONTENT */
+
+.alarmify-firstrow {
+  width: 100%;
+  max-width: 1170px;
+  padding: 60px 20px 0 20px;
+  margin: auto;
+
+  @include breakpoint(desktop) {
+    padding: 60px 0 0 0;
+    margin: auto;
+  }
+}
+
+.alarmify-secondrow {
+  width: 100%;
+  max-width: 1170px;
+  padding: 30px 20px 0 20px;
+
+  @include breakpoint(desktop) {
+    padding: 30px 0 0 0px;
+    margin: auto;
+  }
+}
+
+.alarmify-imgbox{
+  width: 100%;
+  float: left;
+
+  @include breakpoint(laptop) {
+    width: 48%;
+    max-width: 570px;
+  }
+}
+
+.alarmify-captionbox {
+  width: 100%;
+  padding-bottom: 100%;
+  margin: 0 0 20px 0%;
+  max-height: 570px;
+  float: left;
+  position: relative;
+  background: url("../img/alarmify-pic2.jpg");
+  background-size: cover;
+  color: #fff;
+
+  span {
+    position: absolute;
+    text-align: left;
+    bottom: 30px;
+    left: 30px;
+    width: 85%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include breakpoint(laptop) {
+    width: 48%;
+    max-width: 570px;
+    padding-bottom: 48%;
+    margin: 0 4% 0 0;
+  }
+}
+
+.alarmify-textbox{
+  width: 100%;
+  text-align: center;
+  float: left;
+  padding: 40px 0 0 0;
+
+  @include breakpoint(laptop){
+    width: 50%;
+    text-align: left;
+    padding: 40px 0px 0px 30px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 180px 0px 0px 30px;
+  }
+}
+
+.alarmify-divider {
+  width: 40px;
+  height: 4px;
+  background: #0087cf;
+  margin: 18px auto 18px auto;
+
+  @include breakpoint(laptop) {
+    margin: 18px 0px 18px 0px;
+  }
+}
+
+.alarmify-divider-center {
+  width: 40px;
+  height: 4px;
+  background: #0087cf;
+  margin: 18px auto 18px auto;
+}
+
+/*  WIREFRAME SECTION  */
+
+.alarmify-lightgray {
+  width: 100%;
+  background: #e8e8e8;
+  margin-top: 20px;
+  padding: 100px 0 100px 0;
+
+  @include breakpoint(tablet) {
+    margin-top: 60px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-top: 125px;
+  }
+}
+
+.alarmify-wireframes{
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 20px 0 20px;
+
+  img {
+    padding: 0 0 40px 0;
+
+    @include breakpoint(laptop) {
+      padding: 0 0 80px 0;
+    }
+  }
+}
+
+.wireframes-description{
+  width: 100%;
+  max-width: 770px;
+  margin: auto;
+  text-align: center;
+}
+
+/*  PIXEL SECTION  */
+
+.alarmify-darkgray {
+  width: 100%;
+  background: #1b1b1b;
+  padding: 50px 20px 100px 20px;
+
+  @include breakpoint(laptop) {
+    padding: 50px 0 100px 0;
+  }
+
+  p {
+    padding-top: 40px;
+    color: #ccc;
+  }
+}
+
+.alarmify-pixels {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  text-align: center;
+}
+
+.alarmify-clock {
+  width: 100%;
+  max-width: 670px;
+  margin: auto;
+  position: relative;
+}
+
+.alarmify-clock-detail {
+  width: 203px;
+  height: 203px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+
+  @include breakpoint(laptop) {
+    display: block;
+  }
+}
+
+.alarmify-clock-base {
+  padding-top: 90px;
+  text-align: center;
+}
+
+/* IPHONE SECTION */
+
+.alarmify-phone {
+  width: 100%;
+  max-width: 1170px;
+  background: transparent;
+  padding: 100px 0 0 0;
+  margin: auto;
+  text-align: center;
+
+  @include breakpoint(laptop) {
+    background: url("../img/alarmify-bgscreens.png") center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.alarmify-process {
+  width: 90%;
+  max-width: 1170px;
+  padding: 0 0 100px 0;
+  margin: auto;
+  text-align: center;
+
+  img {
+    padding: 0 0 30px 0;
+  }
+
+  p {
+    width: 100%;
+    max-width: 770px;
+    margin: auto;
+    text-align: center;
+  }
+
+  @include breakpoint(laptop) {
+    width: 100%;
+  }
+}
+
+.alarmify-site {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 20px 0 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 668px;
+
+  @include breakpoint(laptop){
+    padding: 0;
+  }
+}
+
+.alarmify-thanks {
+  width: 100%;
+  background: #0087cf;
+  height: 300px;
+  line-height: 300px;
+  font-size: 42px;
+  text-align: center;
+  color: #fff;
+}

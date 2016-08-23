@@ -1,0 +1,29 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == tablet {
+     @media (min-width: 480px) { @content ; }
+  }
+   
+   @else if $point == 6col {
+     @media (min-width: 580px) { @content ; }
+  }
+
+   @else if $point == laptop {
+     @media (min-width: 770px) { @content ; }
+  }
+   @else if $point == 10col {
+     @media (min-width: 960px) { @content ; }
+  }
+   @else if $point == 12col {
+     @media (min-width: 1150px) { @content ; }
+  }
+   @else if $point == desktop {
+     @media (min-width: 1170px) { @content ; }
+  }
+   @else if $point == 14col {
+     @media (min-width: 1290px) { @content ; }
+  }
+}

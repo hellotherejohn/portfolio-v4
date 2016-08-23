@@ -1,0 +1,307 @@
+
+/* ANIMATIONS */
+
+@keyframes wigglecard{
+  0% {
+    transform:  rotate(-2deg) ;
+  }
+  50% {
+    transform:  rotate(2deg) ;
+  }
+  100% {
+    transform:  rotate(-2deg) ;
+  }
+}
+
+@keyframes spinwatch{
+  0% {
+    transform:  rotate(0deg) ;
+  }
+  100% {
+    transform:  rotate(359deg) ;
+  }
+}
+
+/* REAL CSS */
+
+.sobe {
+  background: #e11b22;
+  color: white;
+}
+
+.sobe-wrap{
+  background: url("../img/sobe-bggrain.png");
+
+  h3 {
+  font-size: 42px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+  }
+}
+
+.sobe-header {
+  background-image: url("../img/sobe-bgbottom.png"), url("../img/sobe-bg.png");
+  background-size: auto, cover;
+  background-position: center bottom, center center;
+  background-repeat: repeat-x, no-repeat;
+  width: 100%;
+  height: 110vh;
+  min-height: 500px;
+  max-height: 1000px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.sobe-logo {
+  width: 100%;
+  max-width: 598px;
+  margin: auto;
+  
+  img {
+    width: 90%;
+    @include breakpoint(desktop){
+      width: 100%;
+    }
+  }
+}
+
+.sobe-cards {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: -200px;
+  background: url("../img/sobe-cards.png") center top no-repeat;
+  min-height: 444px;
+  text-align: center;
+}
+
+.sobe-topcard {
+  width: 100%;
+  max-width: 241px;
+  margin-top: 35px;
+  animation: wigglecard ease-in-out 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+.sobe-intro {
+  width: 100%;
+  background-image: none;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  padding: 50px 20px 50px 20px;
+
+  @include breakpoint(tablet){
+    background-image: url("../img/sobe-brownbottom.png");
+    padding: 50px 20px 250px 20px;
+  }
+  @include breakpoint(desktop){
+    padding: 50px 0 250px 0;
+  }
+}
+
+.campaign-description{
+  width: 100%;
+  max-width: 770px;
+  margin: auto;
+  padding: 0 0 40px 0;
+  text-align: center;
+
+}
+
+.sobe-divider {
+  width: 40px;
+  height: 4px;
+  background: #00b259;
+  margin: 18px auto 18px auto;
+
+  @include breakpoint(desktop){
+    margin: 18px 0 18px 0;
+  }
+}
+
+.sobe-divider-center {
+  width: 40px;
+  height: 4px;
+  background: #e11b22;
+  margin: 18px auto 18px auto;
+}
+
+.sobe-brown {
+  background: #36312d;
+  width: 100%;
+  padding: 60px 20px 0 20px;
+
+  @include breakpoint(desktop){
+    padding: 0px;
+  }
+}
+
+.sobe-milk{
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.sobe-milk-first {
+  margin-top: 0px;
+  width: 100%;
+  max-width: 770px;
+
+  @include breakpoint(tablet){
+    margin-top: -200px;
+  }
+}
+
+.sobe-milk-second {
+  margin-top: -50px;
+  position: relative;
+  z-index: 300;
+  width: 100%;
+  max-width: 484px;
+
+  @include breakpoint(tablet){
+    margin-top: -70px;
+  }
+}
+
+.sobe-milk-third {
+  margin-top: -100px;
+  width: 100%;
+  max-width: 770px;
+
+  @include breakpoint(tablet){
+    margin-top: -150px;
+  }
+}
+
+.sobe-green {
+  display: none;
+  background: #00b259;
+  width: 100%;
+  padding: 100px 0 60px 0;
+
+  @include breakpoint(desktop){
+    display: block;
+  }
+}
+
+.sobe-hand {
+  width: 100%;
+  max-width: 600px;
+  height: 584px;
+  margin: auto;
+  position: relative;
+}
+
+.watchhand {
+  position: absolute;
+  z-index: 666;
+  top: 107px;
+  right: 115px;
+  animation: spinwatch linear 30s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+}
+
+.stopwatch {
+  width: 100%;
+  max-width: 600px;
+}
+
+.sobe-darkgreen {
+  background: #008c46;
+  width: 100%;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 60px 0px 60px 0px;
+  }
+}
+
+.sobe-diy {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.sobe-diyleft {
+  float: left;
+  width: 100%;
+  text-align: center;
+  
+
+  @include breakpoint(desktop){
+    width: 50%;
+    text-align: left;
+  }
+
+  img{
+    border-radius: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+.sobe-diyright {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+
+  @include breakpoint(desktop){
+    width: 50%;
+    padding-top: 70px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 42px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+  }
+}
+
+.sobe-screens {
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+  padding: 0 0 40px 0;
+
+  @include breakpoint(tablet){
+    padding: 100px 0 100px 0;
+  }
+
+  img{
+    margin: 20px 0 20px 0;
+  }
+
+  p {
+    color: #f4e9da;
+  }
+}
+
+.sobe-endstack {
+  width: 100%;
+  background: url("../img/sobe-endstack.png") center bottom #36312d no-repeat;
+  padding-bottom: 400px;
+}

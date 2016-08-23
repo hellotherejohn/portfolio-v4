@@ -1,0 +1,203 @@
+
+/* REAL CSS */
+
+.notes {
+  background: #999;
+  color: white;
+}
+
+.notes-wrap{
+  background: #fafafa;
+  text-align: center;
+
+  h3 {
+  font-size: 42px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+  }
+
+}
+
+.notes-header {
+  background: #151515;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 1000px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.notes-logo {
+  width: 90%;
+  max-width: 491px;
+  margin: auto;
+  
+  @include breakpoint(laptop) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.notes-intropic {
+  margin: 100px auto 0px auto;
+  padding: 0 10px 0 10px;
+
+  @include breakpoint(desktop) {
+    padding: 0px;
+  }
+}
+
+.notes-description{
+  width: 100%;
+  max-width: 770px;
+  margin: auto;
+  text-align: center;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.notes-divider-center {
+  width: 40px;
+  height: 4px;
+  background: #151515;
+  margin: 18px auto 18px auto;
+}
+
+.notes-divider-light {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  margin: 18px auto 18px auto;
+}
+
+.notes-tech{
+  width: 100%;
+  background: #3c3f42;
+  color: white;
+  padding: 120px 20px 60px 20px;
+  
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.notes-description-light{
+  width: 100%;
+  color: white;
+  max-width: 770px;
+  margin: auto;
+  text-align: center;
+  padding: 20px 20px 0 20px;
+
+  @include breakpoint(desktop){
+    padding: 20px 0 0 0;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+
+  span {
+    color: #cbd1d6;
+  }
+}
+
+.notes-tour{
+  width: 100%;
+  background: #202224;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+}
+
+.notes-tour-screens {
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+  text-align: center;
+
+  img{
+    margin: 20px 0 20px 0;
+  }
+
+  p{
+    text-align: center;
+    color: #8a9199;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.notes-early {
+  padding: 20px 0 20px 0;
+
+  @include breakpoint(tablet) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+.notes-live{
+  width: 100%;
+  background: #3c3f42;
+  padding: 60px 20px 60px 20px;
+
+  @include breakpoint(desktop){
+    padding: 100px 0 100px 0;
+  }
+
+  img {
+    box-shadow: 0px 44px 48px -24px rgba(0,0,0,0.6);
+  }
+}
+
+.contentbutton{
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  overflow:hidden;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin: 60px auto 0px auto;
+  transition: all 200ms ease-in-out;
+
+  @include breakpoint(tablet){
+    width: 23.5%;
+    margin: 60px auto 0px auto;
+  }
+}
+
+.contentbutton:hover{
+  color: #222;
+  background: #fff;
+  border: 1px solid #fff;
+  transition: all 200ms ease-in-out;
+}
