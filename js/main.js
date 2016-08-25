@@ -77,8 +77,38 @@ $(".animsition").animsition({
   })();
 
 
-// Mikes scrollmenu
+//Johns scrollmenu
 
+$(window).scroll(function(){
+        var ScrollTop = parseInt($(window).scrollTop());
+        var window_height = $(window).height();
+        var about_height = window_height/2 + 4500;
+
+        if (ScrollTop < window_height/2) {
+            $(".top").addClass( "current" );
+            $(".middle").removeClass( "current" );
+            $(".bottom").removeClass( "current" );
+        }
+
+        else if (ScrollTop < about_height) {
+            //alert("Scroll is greater than 100");
+            $(".top").removeClass( "current" );
+            $(".middle").addClass( "current" );
+            $(".bottom").removeClass( "current" );
+        }
+
+        else {
+            $(".top").removeClass( "current" );
+            $(".middle").removeClass( "current" );
+            $(".bottom").addClass( "current" );
+        }
+
+    });
+
+
+
+// Mikes scrollmenu
+/*
 var positions = []
     var document_height = $( document ).height();
     var window_height = $(window).height();
@@ -136,6 +166,8 @@ var positions = []
       set_active(read_offset(scroll));
 
     });
+
+*/
 
     //init Stellar.js (parallax)
     $.stellar({

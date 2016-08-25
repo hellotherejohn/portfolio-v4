@@ -116,7 +116,7 @@ h2:first-child{
   align-items: center;
 
   @include breakpoint(laptop) {
-    min-height: 700px;
+    min-height: 600px;
   }
 
   @include breakpoint(10col) {
@@ -129,7 +129,7 @@ h2:first-child{
    }
 
    @include breakpoint(14col) {
-    max-width: 1070px;
+    max-width: 1140px;
   }
 }
 
@@ -145,7 +145,7 @@ h2:first-child{
 
 .card{
   width: 100%;
-  height: 380px;
+  height: 320px;
   pointer-events: none;
   margin: auto;
   transform-style: preserve-3d;
@@ -154,6 +154,7 @@ h2:first-child{
   
     @include breakpoint(laptop){
       width: 620px;
+      height: 380px;
     }
 
     @include breakpoint(10col) {
@@ -171,13 +172,17 @@ h2:first-child{
 
   .introtxt {
     position: absolute;
-    font-size: 36px;
+    font-size: 32px;
     letter-spacing: -0.02em;
     font-weight: bold;
     color: #fff;
     line-height: 50px;
     text-align: center;
     width: 100%;
+
+    @include breakpoint(laptop) {
+     font-size: 36px;
+    }
 
     @include breakpoint(laptop) {
      font-size: 50px;
@@ -190,27 +195,39 @@ h2:first-child{
   }
 
   .txtrow1 {
-    top: 85px;
+    top: 100px;
     opacity: 0;
-    transform: translateZ(15px);
+    transform: translateZ(10px);
+
+    @include breakpoint(tablet) {
+      top: 85px;
+    }
 
     @include breakpoint(6col) {
       top: 95px;
     }
   }
   .txtrow2 {
-    top: 135px;
+    top: 150px;
     opacity: 0;
     transform: translateZ(10px);
+
+    @include breakpoint(tablet) {
+      top: 135px;
+    }
 
     @include breakpoint(6col) {
       top: 160px;
     }
   }
   .txtrow3 {
-    top: 190px;
+    top: 200px;
     opacity: 0;
-    transform: translateZ(5px);
+    transform: translateZ(10px);
+
+    @include breakpoint(tablet) {
+      top: 190px;
+    }
 
     @include breakpoint(6col) {
       top: 225px;
@@ -277,13 +294,48 @@ h2:first-child{
   width: 100%;
 }
 
-.casebox {
+.phonebox {
+  display: block;
+
+  @include breakpoint(10col) {
+    display: none !important;
+  }
+}
+
+.phonecase {
   width: 100%;
-  height: 100vh;
-  min-height: 900px;
-  max-width: 1140px;
-  margin-left: 70px;
-  position: relative;
+  max-width: 370px;
+  padding: 20px;
+  margin: 0 auto 40px auto;
+
+  @include breakpoint(laptop) {
+    max-width: 740px;
+  }
+
+  @include breakpoint(10col) {
+    display: none;
+  }
+}
+
+.casebox {
+  display: none;
+
+  @include breakpoint(10col) {
+    display: block;
+    width: 100%;
+    height: 900px;
+    position: relative;
+    max-width: 810px;
+    margin-left: 70px;
+  }
+
+  @include breakpoint(12col) {
+    max-width: 1000px;
+   }
+
+   @include breakpoint(14col) {
+    max-width: 1070px;
+  }
 
   img {
     position: absolute;
@@ -291,13 +343,20 @@ h2:first-child{
 }
 
 .casebottom {
-  width: 760px;
-  height: 400px;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-top: -200px;
-  overflow: hidden;
+  display: none;
+
+  @include breakpoint(10col) {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      height: 400px;
+      position: absolute;
+      margin-top: -200px;
+      overflow: hidden;
+      left: 0%;
+      margin-left: 0px;
+      top: 50%;
+  }
 
   img {
     transition: all 1s;
@@ -309,8 +368,12 @@ h2:first-child{
   height: 100px;
   position: absolute;
   top: 70%;
-  left: 60px;
+  left: 45px;
   cursor: pointer;
+
+  @include breakpoint(12col) {
+      left: 60px;
+  }
 
   .diamond {
     width: 100px;
@@ -368,32 +431,71 @@ h2:first-child{
 }
 
 .casemid {
-  width: 570px;
-  height: 428px;
-  position: absolute;
-  top: 50%;
-  left: 380px;
-  margin-top: -114px;
+  width: 100%;
+  max-width: 350px;
+  float: left;
+  position: relative;
+  display: block;
   box-shadow: 6px 0px 60px 0px rgba(17,17,17,0.5);
   overflow: hidden;
 
   img {
     transition: all 1s;
   }
+
+  @include breakpoint(10col) {
+   float: none;
+   max-width: 570px;
+   height: 428px;
+   position: absolute;
+   top: 50%;
+   left: 190px;
+   margin-left: 0px;
+   margin-top: 0px;
+  }
+
+  @include breakpoint(12col) {
+   left: 285px;
+   margin-top: -57px;
+  }
+
+  @include breakpoint(14col) {
+   left: 380px;
+   margin-top: -114px;
+  }
 }
 
 .casetop {
-  width: 475px;
-  height: 290px;
+  position: relative;
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 665px;
-  margin-top: -145px;
-  background: #222;
   box-shadow: 6px 0px 60px 0px rgba(17,17,17,0.5);
-  padding: 55px 0 0 60px;
+  background: #222;
+  padding: 40px 0 0 40px;
   text-decoration: none;
+  width: 100%;
+  max-width: 350px;
+  float: left;
+  height: 263px;
+
+  @include breakpoint(10col) {
+    top: 50%;
+    float: none;
+    position: absolute;
+    padding: 55px 0 0 60px;
+    left: 335px;
+    max-width: 475px;
+    margin-top: -145px;
+    margin-left: 0px;
+    height: 290px;
+  }
+
+  @include breakpoint(12col) {
+   left: 525px;
+  }
+
+  @include breakpoint(14col) {
+   left: 665px;
+  }
 
   &:hover .viewcase {
     background: #fff;
@@ -450,17 +552,27 @@ h2:first-child{
   height: 100vh;
   min-height: 900px;
   max-width: 1140px;
-  margin-left: 70px;
-  margin-top: 300px;
+  margin-left: 0px;
+  margin-top: 100px;
   margin-bottom: 200px;
   position: relative;
+
+  @include breakpoint(10col) {
+   margin-left: 70px;
+   margin-top: 300px;
+  }
 }
 
 .leftme {
-  width: 34%;
-  max-width: 380px;
-  height: 100%;
-  float: left;
+  display: none;
+
+  @include breakpoint(12col) {
+    display: block;
+    width: 34%;
+    max-width: 380px;
+    height: 100%;
+    float: left;
+  }
 
   .shard {
     position: absolute;
@@ -477,8 +589,26 @@ h2:first-child{
 
 .rightme {
   float: left;
-  width: 66%;
-  padding: 0 0 0 95px;
+  width: 100%;
+  padding: 0 40px 0 40px;
+
+  @include breakpoint(laptop) {
+   padding: 0 95px 0 95px;
+  }
+
+  @include breakpoint(10col) {
+   width: 760px;
+   padding: 0;
+  }
+
+  @include breakpoint(12col) {
+   width: 665px;
+   padding: 0 0 0 95px;
+  }
+
+  @include breakpoint(14col) {
+   width: 760px;
+  }
 
   p {
     color: #888;
@@ -497,6 +627,7 @@ h2:first-child{
     margin-right: 20px;
     height: 30px;
     transition: all 300ms;
+    margin-bottom: 10px;
 
     &:hover {
       border-bottom: 1px solid #fff;
@@ -511,8 +642,12 @@ h2:first-child{
 .smallgap { margin-top: 30px;}
 
 .rightme table {
-  width: 90%;
+  width: 100%;
   margin-top: 30px;
+
+  @include breakpoint(10col) {
+   width: 95%;
+  }
 }
 
 .rightme td {

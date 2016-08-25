@@ -676,6 +676,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/lmno-mid.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 85951,
+		"inputAbbreviatedPath": "\/img\/lmno-mid.jpg",
+		"outputAbbreviatedPath": "\/img\/lmno-mid.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/lmno-mid@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 227316,
+		"inputAbbreviatedPath": "\/img\/lmno-mid@2x.jpg",
+		"outputAbbreviatedPath": "\/img\/lmno-mid@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/notes-btm.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
